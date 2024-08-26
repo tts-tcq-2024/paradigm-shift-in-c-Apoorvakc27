@@ -43,15 +43,10 @@ int check_chargeRate(float chargeRate) {
     return isInRange;
 }
 
-// Helper function to evaluate all checks
+// Helper function to evaluate all checks with reduced CCN
 int evaluate_checks(int tempCheck, int socCheck, int chargeRateCheck) {
-    if (tempCheck == 0) {
-        return 0;
-    }
-    if (socCheck == 0) {
-        return 0;
-    }
-    return chargeRateCheck;
+    // Combine the checks into a single return statement
+    return tempCheck && socCheck && chargeRateCheck;
 }
 
 // Combined function to check all parameters
