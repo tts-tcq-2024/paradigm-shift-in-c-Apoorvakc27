@@ -25,8 +25,8 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
 }
 
 int main() {
-    assert(function(25, 70, 0.7));  // Should return 1 (no condition out of range, no output)
+    assert(batteryIsOk(25, 70, 0.7));  // Should return 1 (no condition out of range, no output)
     assert(!batteryIsOk(50, 85, 0));
-    assert(function(50, 85, 0)); // Should return 0 (one or more conditions out of range, output messages)
+    assert(batteryIsOk(-4, 90, 1)); // Should return 0 (one or more conditions out of range, output messages)
     return 0;
 }
