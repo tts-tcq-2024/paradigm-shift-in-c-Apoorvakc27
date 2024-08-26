@@ -1,51 +1,46 @@
 #include <stdio.h>
 #include <assert.h>
 
-// Function to check if temperature is below the lower limit
-int is_temperature_below_min(float temperature) {
-    return temperature >= 0;
+// Separate the check for temperature out of range
+int is_temperature_in_range(float temperature) {
+    return (temperature >= 0) && (temperature <= 45);
 }
 
-// Function to check if temperature is above the upper limit
-int is_temperature_above_max(float temperature) {
-    return temperature <= 45;
-}
-
-// Combined function to check if temperature is within range
+// Function to check if temperature is within range
 int check_temperature(float temperature) {
-    int isWithinRange = is_temperature_below_min(temperature) && is_temperature_above_max(temperature);
-    if (!isWithinRange) {
+    int isInRange = is_temperature_in_range(temperature);
+    if (!isInRange) {
         printf("temperature out of range\n");
     }
-    return isWithinRange;
+    return isInRange;
 }
 
-// Function to check if SOC is below the lower limit
-int is_soc_below_min(float soc) {
-    return soc >= 20;
+// Separate the check for SOC out of range
+int is_soc_in_range(float soc) {
+    return (soc >= 20) && (soc <= 80);
 }
 
-// Function to check if SOC is above the upper limit
-int is_soc_above_max(float soc) {
-    return soc <= 80;
-}
-
-// Combined function to check if SOC is within range
+// Function to check if SOC is within range
 int check_soc(float soc) {
-    int isWithinRange = is_soc_below_min(soc) && is_soc_above_max(soc);
-    if (!isWithinRange) {
+    int isInRange = is_soc_in_range(soc);
+    if (!isInRange) {
         printf("soc out of range\n");
     }
-    return isWithinRange;
+    return isInRange;
+}
+
+// Separate the check for chargeRate out of range
+int is_chargeRate_in_range(float chargeRate) {
+    return chargeRate <= 0.8;
 }
 
 // Function to check if chargeRate is within range
 int check_chargeRate(float chargeRate) {
-    if (chargeRate > 0.8) {
+    int isInRange = is_chargeRate_in_range(chargeRate);
+    if (!isInRange) {
         printf("chargeRate out of range\n");
-        return 0;
     }
-    return 1;
+    return isInRange;
 }
 
 // Combined function to check all parameters
