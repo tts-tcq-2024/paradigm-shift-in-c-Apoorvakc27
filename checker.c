@@ -2,7 +2,7 @@
 #include <assert.h>
 
 // Function to check if T is within range
-int check_T(float temperature) {
+int check_temperature(float temperature) {
     if (temperature < 0 || temperature > 45) {
         printf("temperature out of range\n");
         return 0;
@@ -11,7 +11,7 @@ int check_T(float temperature) {
 }
 
 // Function to check if S is within range
-int check_S(float soc) {
+int check_soc(float soc) {
     if (soc < 20 || soc > 80) {
         printf("soc out of range\n");
         return 0;
@@ -20,7 +20,7 @@ int check_S(float soc) {
 }
 
 // Function to check if C is within range
-int check_C(float chargeRate) {
+int check_chargeRate(float chargeRate) {
     if (chargeRate > 0.8) {
         printf("chargeRate out of range\n");
         return 0;
@@ -30,7 +30,7 @@ int check_C(float chargeRate) {
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
     // Call the range-checking functions
-    return check_T(temperature) && check_S(soc) && check_C(chargeRate);
+    return check_temperature(temperature) && check_soc(soc) && check_chargeRate(chargeRate);
 }
 
 int main() {
