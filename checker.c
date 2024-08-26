@@ -45,7 +45,18 @@ int check_chargeRate(float chargeRate) {
 
 // Combined function to check all parameters
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-    return check_temperature(temperature) && check_soc(soc) && check_chargeRate(chargeRate);
+    int tempCheck = check_temperature(temperature);
+    if (tempCheck == 0) {
+        return 0;
+    }
+
+    int socCheck = check_soc(soc);
+    if (socCheck == 0) {
+        return 0;
+    }
+
+    int chargeRateCheck = check_chargeRate(chargeRate);
+    return chargeRateCheck;
 }
 
 int main() {
