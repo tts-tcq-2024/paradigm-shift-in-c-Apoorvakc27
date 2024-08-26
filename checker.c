@@ -1,31 +1,19 @@
 #include <stdio.h>
 #include <assert.h>
 
-// Function to check if T is within range
+// Function to check if temperature is within range
 int check_temperature(float temperature) {
-    if (temperature < 0 || temperature > 45) {
-        printf("temperature out of range\n");
-        return 0;
-    }
-    return 1;
+    return !(temperature < 0 || temperature > 45) || printf("temperature out of range\n") * 0;
 }
 
-// Function to check if S is within range
+// Function to check if SOC is within range
 int check_soc(float soc) {
-    if (soc < 20 || soc > 80) {
-        printf("soc out of range\n");
-        return 0;
-    }
-    return 1;
+    return !(soc < 20 || soc > 80) || printf("soc out of range\n") * 0;
 }
 
-// Function to check if C is within range
+// Function to check if chargeRate is within range
 int check_chargeRate(float chargeRate) {
-    if (chargeRate > 0.8) {
-        printf("chargeRate out of range\n");
-        return 0;
-    }
-    return 1;
+    return !(chargeRate > 0.8) || printf("chargeRate out of range\n") * 0;
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
@@ -40,6 +28,3 @@ int main() {
     //assert(batteryIsOk(44, 26, 0.2));
     return 0;
 }
-
-
-
