@@ -10,5 +10,4 @@ void check_error_or_warning(const char *paramName, float value, float min, float
 int check_error(const char *paramName, float value, float min, float max);
 
 
-
 #endif // RANGE_CHECK_H
