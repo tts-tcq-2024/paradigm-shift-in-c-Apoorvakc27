@@ -7,5 +7,6 @@ int check_temperature(float temperature);
 int check_soc(float soc);
 int check_chargeRate(float chargeRate);
 void check_error_or_warning(const char *paramName, float value, float min, float max, float lowerTolerance, float upperTolerance);
+int check_error(const char *paramName, float value, float min, float max);
 
 #endif // RANGE_CHECK_H
