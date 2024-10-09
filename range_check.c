@@ -17,7 +17,7 @@ void check_warning(const char *paramName, float value, float min, float max, flo
 
 // Check if temperature is within range and issue warnings if close to the limit
 int check_temperature(float temperature) {
-    float minTemp = 0.0, maxTemp = 45.0, tolerance = 4.5; // 10% tolerance
+    float minTemp = 0.0, maxTemp = 45.0, tolerance = 5; // 10% tolerance
     check_warning("Temperature", temperature, minTemp, maxTemp, tolerance);
     
     int isInRange = is_value_in_range(temperature, minTemp, maxTemp);
