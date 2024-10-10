@@ -2,7 +2,6 @@
 #define BATTERY_CHECK_H
 #include <stdbool.h>
 
-bool evaluate_checks(bool tempCheck, bool socCheck, bool chargeRateCheck);
 bool batteryIsOk(float temperature, float soc, float chargeRate);
 
 #endif // BATTERY_CHECK_H
