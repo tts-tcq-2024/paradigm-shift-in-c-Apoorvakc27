@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>  
 #include "range_check.h"
 
 // General range check function
