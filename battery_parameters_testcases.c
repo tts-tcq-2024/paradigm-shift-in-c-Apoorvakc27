@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "battery_check.h"
+#include "battery_parameters_testcases.h"
 
 void runAllTests() {
     // Temperature Tests
