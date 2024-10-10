@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "battery_check.h"
-#include "range_check.h"
 #include "soc_check.h"
 #include "temperature_check.h"
 #include "charge_rate_check.h"
