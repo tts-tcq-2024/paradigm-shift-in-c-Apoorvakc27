@@ -4,6 +4,6 @@
 
 int main() {
     bool allTestsPassed = runAllTests();
-    return allTestsPassed ? 0 : 1; // Return 0 if all tests pass, 1 otherwise
+    return allTestsPassed ? 0 : 1; // Return 0 if all tests pass
 }
 
