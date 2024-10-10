@@ -3,6 +3,7 @@
 
 int is_value_in_range(float value, float min, float max);
 int check_error(const char *paramName, float value, float min, float max);
+int check_warning(const char *paramName, float value, float min, float max, float lowerTolerance, float upperTolerance);
 void check_warning_and_error(const char *paramName, float value, float min, float max, float lowerTolerance, float upperTolerance);
 int check_temperature(float temperature);
 int check_soc(float soc);
