@@ -1,5 +1,5 @@
 #ifndef BATTERY_PARAMETERS_TESTCASES_H
 #define BATTERY_PARAMETERS_TESTCASES_H
 
-void runAllTests();
+bool runAllTests();
 #endif
