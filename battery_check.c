@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "battery_check.h"
 #include "range_check.h"
 
