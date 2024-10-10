@@ -1,5 +1,6 @@
 #ifndef RANGE_CHECK_H
 #define RANGE_CHECK_H
+#include <stdbool.h>
 
 bool is_value_in_range(float value, float min, float max);
 bool check_error(const char *paramName, float value, float min, float max);
