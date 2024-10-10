@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>  // Include for boolean types
 #include "battery_check.h"
 #include "range_check.h"
 
